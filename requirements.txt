@@ -1,7 +1,7 @@
 pydantic>=2.0
 networkx>=3.0
 python-evtx>=0.8
-defusedxml>=0.7
+defusedxml>=0.7.1
 fastapi>=0.110
 uvicorn>=0.29
 pyyaml>=6
