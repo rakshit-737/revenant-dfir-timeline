@@ -48,7 +48,7 @@ jobs:
       - name: B3b anti-forensics (OTRF captures labelled T1562.002)
         working-directory: benchmarks
         run: python bench_antiforensics_b3b.py && cp ../results/antiforensics_b3b.json ../out/antiforensics_b3b_ci.json
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: always()
         with:
           name: bench-main
@@ -84,7 +84,7 @@ jobs:
         run: |
           python bench_edges.py --extra --shipped-table ../main-out/rule_calibration.json --out edges_ci_day2.json
           cp ../results/edges_ci_day2.json ../out/
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: always()
         with:
           name: bench-day2
@@ -109,7 +109,7 @@ jobs:
         run: |
           mkdir -p ../out
           python bench_scale.py && cp ../results/scale.json ../out/scale_ci.json
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: always()
         with:
           name: bench-scale
@@ -138,7 +138,7 @@ jobs:
           mkdir -p out/results out/package && cp results/*.json out/results/ && cp src/revenant/data/rule_calibration.json out/package/
       - name: Regenerate RESULTS.md, stats.json and figures
         run: python benchmarks/make_figures.py && cp results/* out/results/
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: always()
         with:
           name: bench-results
